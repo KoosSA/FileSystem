@@ -23,7 +23,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Release
-      uses: "marvinpinto/action-automatic-releases@latest"
+
+    - uses: "marvinpinto/action-automatic-releases@latest"
       with:
+        automatic_release_tag: "latest"
         prerelease: false
