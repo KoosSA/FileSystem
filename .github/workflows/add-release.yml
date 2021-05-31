@@ -24,20 +24,20 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
               
-    - uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: false
-        files: |
-          build/libs/*.jar
+#    - uses: "marvinpinto/action-automatic-releases@latest"
+ #     with:
+  #      repo_token: "${{ secrets.GITHUB_TOKEN }}"
+   #     automatic_release_tag: "latest"
+    #    prerelease: false
+     #   files: |
+      #    build/libs/*.jar
           
     - name: Tag
       uses: K-Phoen/semver-release-action@master
       with:
           release_branch: master
-          release_strategy: "release"
-          tag_format: "%major%.%minor%.%patch%"
+         # release_strategy: "release"
+          #tag_format: "%major%.%minor%.%patch%"
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
