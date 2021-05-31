@@ -1,4 +1,5 @@
 [![Actions Status](https://github.com/KoosSA/FileSystem/workflows/Release-latest/badge.svg)](https://github.com/KoosSA/FileSystem/actions)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/KoosSA/FileSystem?label=version)
 
 # FileSystem Library Readme
 
