@@ -10,13 +10,18 @@
   <b>   For Gradle:
   <br>
   <blockquote>
+      project.ext {
+  <br>  version = "......."
+  <br>  }
+  </blockquote>
+  <blockquote>
         repositories {
   <br>      maven { url "https://jitpack.io" }
   <br>  }
   </blockquote>
   <blockquote>
         dependencies {
-  <br>      compile "com.github.KoosSA:FileSystem:latest"
+  <br>      compile "com.github.KoosSA:FileSystem:${version}"
   <br>  }
   </blockquote>
 
