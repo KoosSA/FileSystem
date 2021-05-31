@@ -8,7 +8,7 @@ import javax.swing.filechooser.FileSystemView;
 
 public class Files {
 
-	private static File rootLogs;
+	private static File root;
 	private static Map<String, File> folders = new HashMap<String, File>();
 
 	public static void init(String folderName, RootFileLocation location) {
