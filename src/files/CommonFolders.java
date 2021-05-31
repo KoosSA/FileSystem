@@ -7,6 +7,7 @@ public enum CommonFolders {
 	Fonts,
 	Sounds,
 	Shaders,
-	Saves
+	Saves,
+	Logs
 
 }
