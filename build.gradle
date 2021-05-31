@@ -3,6 +3,8 @@ plugins {
 	id 'java-library'
 }
 
+sourceCompatibility = '1.8'
+
 repositories {
 	mavenCentral()
 }
@@ -12,6 +14,11 @@ dependencies {
 }
 
 sourceSets {
-	main.java.srcDirs = ['src']
+	src {
+		main {
+			java {
+			}
+		}
+	}
 }
  
