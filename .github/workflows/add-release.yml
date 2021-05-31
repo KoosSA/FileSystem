@@ -24,11 +24,20 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - uses: "marvinpinto/action-automatic-releases@latest"
+   # - uses: "marvinpinto/action-automatic-releases@latest"
+   #   with:
+   #     repo_token: "${{ secrets.GITHUB_TOKEN }}"
+   #     automatic_release_tag: "latest"
+   #     prerelease: false
+    #    files: |
+     #     build/libs/*.jar
+          
+    - name: Automatic Semver Release
+      uses: rui-costa/action-automatic-semver-releases@1.0.0-final
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: false
-        draft: true
-        files: |
-          build/libs/*.jar
+        # Secret token from GitHub
+        TOKEN: "${{ secrets.GITHUB_TOKEN }}" 
+        # Which version you want to increment? Use MAJOR, MINOR or PATCH
+        SEMVER: MAJOR
+        # The name of your main branch
+        MAIN_BRANCH: master
