@@ -1,4 +1,4 @@
-package files;
+package com.koossa.filesystem;
 
 import java.io.File;
 import java.util.HashMap;

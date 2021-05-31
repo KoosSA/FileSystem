@@ -1,4 +1,4 @@
-package files;
+package com.koossa.filesystem;
 
 public enum CommonFolders {
 	
