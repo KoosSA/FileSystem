@@ -49,14 +49,14 @@ public class Files {
 		return folders.getOrDefault(folderName, createFolder(folderName));
 	}
 
-	
+
 	private static File createFolder(String folderName) {
 		File folder = new File(root, folderName);
 		validateFolder(folder);
 		folders.put(folderName, folder);
 		return folder;
 	}
-	
+
 	/**
 	 * Get the path to a folder from the {@link CommonFolders} class.
 	 * @param folder
@@ -65,7 +65,7 @@ public class Files {
 	public static String getCommonFolderPath(CommonFolders folder) {
 		return getCommonFolder(folder).getAbsolutePath();
 	}
-	
+
 	/**
 	 * Get the path to a folder not specified in the {@link CommonFolders} class.
 	 * @param folderName
@@ -84,6 +84,14 @@ public class Files {
 		if (!folder.exists()) {
 			folder.mkdirs();
 		}
+	}
+
+	/**
+	 * Gets the root folder for the filesystem.
+	 * @return rootFolder
+	 */
+	public static File getRootFolder() {
+		return root;
 	}
 
 }
