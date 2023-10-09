@@ -1,9 +1,14 @@
 plugins {
-	id 'java'
 	id 'java-library'
+	id 'maven-publish'
 }
 
 sourceCompatibility = '1.8'
+
+group 'koossa'
+version mavenPubVersion
+
+
 
 repositories {
 	mavenCentral()
@@ -13,12 +18,19 @@ dependencies {
 	
 }
 
-sourceSets {
-	src {
-		main {
-			java {
-			}
+publishing {
+	repositories {
+		maven() {
+			def releaseRepoUrl = 'file://D:/git/MavenRepos/Releases'
+			def snapshotsRepoUrl = 'file://D:/git/MavenRepos/Snapshots'
+			url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releaseRepoUrl   
 		}
 	}
+	publications {
+		maven(MavenPublication) {
+            from components.java
+        }
+	}
 }
+
  
