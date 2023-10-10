@@ -7,12 +7,38 @@ package com.koossa.filesystem;
  */
 public enum CommonFolders {
 	
+	/**
+	 * Folder to store models
+	 */
 	Models,
+	/**
+	 * Folder to store textures
+	 */
 	Textures,
+	/**
+	 * Folder to store fonts
+	 */
 	Fonts,
+	/**
+	 * Folder to store sounds
+	 */
 	Sounds,
+	/**
+	 * Folder to store shaders
+	 */
 	Shaders,
+	/**
+	 * Folder to store saves
+	 */
 	Saves,
-	Logs
+	/**
+	 * Folder to store logs
+	 */
+	Logs,
+	/**
+	 * Folder to store gui files
+	 */
+	Gui
+	
 
 }

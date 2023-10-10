@@ -5,7 +5,7 @@ plugins {
 
 sourceCompatibility = '1.8'
 
-group 'koossa'
+group 'github.koossa'
 version mavenPubVersion
 
 
@@ -18,7 +18,7 @@ dependencies {
 	
 }
 
-publishing {
+/*publishing {
 	repositories {
 		maven() {
 			def releaseRepoUrl = 'file://D:/git/MavenRepos/Releases'
@@ -31,6 +31,30 @@ publishing {
             from components.java
         }
 	}
+}*/
+
+java {
+    withSourcesJar()
+    withJavadocJar()
 }
 
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/KoosSA/MavenRepos")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GIT_USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("GIT_TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+        	artifactId = 'filesystem'
+            from(components.java)
+        }
+    }
+}
  

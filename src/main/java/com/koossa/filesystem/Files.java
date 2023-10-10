@@ -19,8 +19,8 @@ public class Files {
 
 	/**
 	 * Initializes the folder system.
-	 * @param folderName
-	 * @param location
+	 * @param folderName - The name of the resource (asset) folder
+	 * @param location - Location of the resource (asset) folder
 	 */
 	public static void init(String folderName, RootFileLocation location) {
 		if (location == RootFileLocation.LOCAL) {
@@ -33,7 +33,7 @@ public class Files {
 
 	/**
 	 * Get a folder ({@link File}) from the {@link CommonFolders} class.
-	 * @param folder
+	 * @param folder - The name of folder to get
 	 * @return {@link File}
 	 */
 	public static File getCommonFolder(CommonFolders folder) {
@@ -42,7 +42,7 @@ public class Files {
 
 	/**
 	 * Get a folder ({@link File}) not specified in the {@link CommonFolders} class.
-	 * @param folderName
+	 * @param folderName - The name of the folder to get
 	 * @return {@link File}
 	 */
 	public static File getFolder(String folderName) {
@@ -59,7 +59,7 @@ public class Files {
 
 	/**
 	 * Get the path to a folder from the {@link CommonFolders} class.
-	 * @param folder
+	 * @param folder - Folder name to get
 	 * @return {@link String}
 	 */
 	public static String getCommonFolderPath(CommonFolders folder) {
@@ -68,7 +68,7 @@ public class Files {
 
 	/**
 	 * Get the path to a folder not specified in the {@link CommonFolders} class.
-	 * @param folderName
+	 * @param folderName - Folder name to get
 	 * @return {@link String}
 	 */
 	public static String getFolderPath(String folderName) {
@@ -78,7 +78,7 @@ public class Files {
 	/**
 	 * Validates a folder. <br>
 	 * If the folder does not exists on the system, creates the folder.
-	 * @param folder
+	 * @param folder - Folder to validate
 	 */
 	public static void validateFolder(File folder) {
 		if (!folder.exists()) {
