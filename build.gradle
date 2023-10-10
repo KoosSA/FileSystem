@@ -18,21 +18,6 @@ dependencies {
 	
 }
 
-/*publishing {
-	repositories {
-		maven() {
-			def releaseRepoUrl = 'file://D:/git/MavenRepos/Releases'
-			def snapshotsRepoUrl = 'file://D:/git/MavenRepos/Snapshots'
-			url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releaseRepoUrl   
-		}
-	}
-	publications {
-		maven(MavenPublication) {
-            from components.java
-        }
-	}
-}*/
-
 java {
     withSourcesJar()
     withJavadocJar()
